@@ -13,7 +13,7 @@
       <nav>
         <ul>
           <li><img id="hamburger" src="images/hamburger.png" /></li>
-          <li>Halifax Canoe and Kayak</li>
+          <li id="header_text">Halifax Canoe and Kayak</li>
           <li><img src="images/paddle-white.png" alt="Paddle logo" /></li>
         </ul>
       </nav>
@@ -27,12 +27,12 @@
         margin-top: 120px;
       "
     >
-      <div id="sidebar" style="width: 400px; background-color: red">
+      <div id="sidebar" style="width: 700px; background-color: #818abf">
         <aside>
           <ul>
-            <li>Home</li>
-            <li>Book trip</li>
-            <li>Admin Login</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Book trip</a></li>
+            <li><a href="#">Admin Login</a></li>
           </ul>
         </aside>
       </div>
@@ -77,10 +77,18 @@
           laoreet augue imperdiet ornare.
         </p>
       </main>
-      <footer>
-        <p>Footer goes here</p>
-      </footer>
     </div>
+      <footer>
+        <div class="ftr">
+          <p>
+            Author: Karolina Redden<br />
+            <a href="mailto:reddenkarolina@gmail.com"
+              >reddenkarolina@gmail.com</a
+            >
+          </p>
+        </div>
+      </footer>
+   
     <script>
       $(document).ready(function () {
         $("#hamburger").click(function () {
