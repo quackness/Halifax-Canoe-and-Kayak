@@ -188,9 +188,11 @@ hr {
     margin-right: 20px;
   }
 
-  /* footer {
-   
-  } */
+  #sidebar > aside > ul > li > a {
+    font-size: 40px;
+  }
 }
+
+
 
 
