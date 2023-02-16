@@ -44,10 +44,12 @@ nav > ul > li > img {
   width: 90px;
   height: 80px;
   padding-top: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #header_text {
   padding-top:40px;
+  text-shadow: 3px 5px #5a524b;
 }
 
 body {
