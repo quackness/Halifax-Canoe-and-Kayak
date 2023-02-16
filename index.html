@@ -12,7 +12,7 @@
     <header id="header_top">
       <nav>
         <ul>
-          <li><img src="images/hamburger.png" /></li>
+          <li><img id="hamburger" src="images/hamburger.png" /></li>
           <li>Halifax Canoe and Kayak</li>
           <li><img src="images/paddle-white.png" alt="Paddle logo" /></li>
         </ul>
@@ -27,7 +27,7 @@
         margin-top: 120px;
       "
     >
-      <div class="sidebar" style="width: 400px; background-color: red;">
+      <div id="sidebar" style="width: 400px; background-color: red">
         <aside>
           <ul>
             <li>Home</li>
@@ -81,5 +81,12 @@
         <p>Footer goes here</p>
       </footer>
     </div>
+    <script>
+      $(document).ready(function () {
+        $("#hamburger").click(function () {
+          $("#sidebar").toggle();
+        });
+      });
+    </script>
   </body>
 </html>
