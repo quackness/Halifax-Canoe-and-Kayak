@@ -1,3 +1,4 @@
+/* reset the margins  */
 * {
   margin: 0;
 }
@@ -30,15 +31,6 @@ nav > ul > li {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* li:nth-child(2) {
-  padding-top: 25px;
-  font-size: 35px;
-} */
-
-/* li {
-  padding-top: 20px;
-  font-size: 35px;
-} */
 
 nav > ul > li > img {
   width: 90px;
@@ -67,16 +59,13 @@ body {
   text-align: center;
 }
 
-/* main {
-  max-width: 1200px;
-} */
+
 
 main > article > header > img {
   width: 100%;
 }
 
 h1 {
-  /* font-family: Arial, Helvetica, sans-serif; */
   text-align: left;
   font-size: 80px;
   color: #5a524b;
@@ -143,7 +132,6 @@ hr {
   color: white;
   text-align: center;
   background-color: #818abf;
-  /* padding-top: 20px; */
 }
 
 
