@@ -144,6 +144,11 @@ hr {
   margin-bottom: 300px
 }
 
+.btn-logout {
+  margin-top:150px;
+  margin-left:1400px;
+}
+
 
 
 @media only screen and (max-width: 800px) {
