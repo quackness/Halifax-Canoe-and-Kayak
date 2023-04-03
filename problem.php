@@ -27,11 +27,17 @@
     }
     if ($_SESSION['role'] == 'ceo') {
       // header("location: need-help.php");
-      echo "CEO";
+      printf ("<br><a href=isnt-working.php>My computer isn't working</a>
+      <br><a href=need-help.php>Call someone and get help</a>
+      ");
     }
     if ($_SESSION['role'] == 'manager') {
       // header("location: lost-password.php");
-      echo "manager";
+      // echo "manager";
+      printf ("<br><a href=isnt-working.php>My computer isn't working</a>
+      <br><a href=lost-password.php>Forgotten password</a>
+      ");
+
     }
   }
   ?>
