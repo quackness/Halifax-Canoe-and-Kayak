@@ -10,10 +10,30 @@
 </head>
 
 <body>
-  <?php include "header.php"; ?>
+
+  <?php
+  session_start();
+
+  if (isset($_POST['role'])) {
+    $_SESSION['role'] = $_POST['role'];
+  }
+
+  if (isset($_SESSION['role'])) {
+    if ($_SESSION['role'] == 'admin') {
+      header("location: new-account.php");
+    }
+    if ($_SESSION['role'] == 'ceo') {
+      header("location: lost-password.php");
+    }
+  }
+  ?>
+
   <div>
-    <button class="btn-logout" type="button">Log out</button>
-    <form method="post" action="/assignments/kayak_club/problem.php">
+    <form method="post" action="">
+      <button class="btn-logout" type="submit" name="logout">Logout</button>
+    </form>
+
+    <form method="post" action="/assignments/kayak_club/index.php">
       <label for="title">Title</label><br>
       <select id="title" name="title"><br>
         <option value="mr">Mr</option>
