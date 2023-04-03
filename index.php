@@ -13,7 +13,7 @@
   <?php include "header.php"; ?>
   <div>
     <button class="btn-logout" type="button">Log out</button>
-    <form method="post" action="/problem.php">
+    <form method="post" action="/assignments/kayak_club/problem.php">
       <label for="title">Title</label><br>
       <select id="title" name="title"><br>
         <option value="mr">Mr</option>
