@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<?php include "header.php"; ?>
+<!-- <?php include "header.php"; ?> -->
 <div margin=300px>
 <a href=“tel:555-666-7777”>Call: 555-666-7777</a>
 </div>
