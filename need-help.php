@@ -9,13 +9,15 @@
 </head>
 <body>
 
-<!-- <?php include "header.php"; ?> -->
-<div margin=300px>
-<a href=“tel:555-666-7777”>Call: 555-666-7777</a>
+<?php include "header.php"; ?>
+<div style="
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 150px;
+      ">
+      <h3>Call the number:<a href=“tel:555-666-7777”>📲 555-666-7777</a></h3>
 </div>
-
-
-
 <?php include "footer.php"; ?>
 
 </body>
