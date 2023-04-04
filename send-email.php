@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="main.css" type="text/css" />
   <title>Send email</title>
 </head>
+
 <body>
   <?php include "header.php"; ?>
 
@@ -23,7 +25,7 @@
       $_SESSION['newAccount'] = $_POST['newAccount'];
       if (isset($_SESSION) == 'newAccount') {
         printf("<br><h3>New account has been created</h3>");
-     
+
       }
     }
 
@@ -33,7 +35,7 @@
       if (isset($_SESSION) == 'lostpassword') {
         printf("<br><h3>Your password has been reset.</h3>
        ");
-   
+
       }
     }
     ?>
