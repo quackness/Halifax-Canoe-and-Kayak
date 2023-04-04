@@ -18,19 +18,30 @@
         margin-top: 130px;
       ">
 
-  
+
     <?php
+
+    if (isset($_POST['fname']) && isset($_POST['lname'])) {
+      $fname = $_POST['fname'];
+      $lname = $_POST['lname'];
+      if (!$fname || !$lname) {
+        printf("You must specify both your firstname and lastname.");
+        printf("<br><a href=index.php>Return to home page </a>");
+        exit();
+      }
+    }
+
 
     if (isset($_POST['role'])) {
       $_SESSION['role'] = $_POST['role'];
-      printf('<h2>Hello, ' . $_SESSION['role'] . '</h2>');
+      printf('<h2>Hello, ' . $_SESSION['role'] . '!</h2>');
     }
 
     ?>
-     <hr>
+    <hr>
     <h3>Here are your options:</h3>
 
- <?php
+    <?php
 
     if (isset($_SESSION['role'])) {
       if ($_SESSION['role'] == 'admin') {

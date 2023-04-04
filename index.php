@@ -19,18 +19,28 @@
         margin-top: 140px;
       ">
   <div>
-    <!-- <form method="post" action="logout.php">
-      <button class="btn-logout" type="submit" name="logout">Logout</button>
-    </form> -->
-   
-    <?php include "buttonToLogout.php"; ?>
-   
+    
+<!-- <?php
+    // if (!isset($_POST['fname'])) {
+    //   // $fname = $_POST['fname'];
+    //   printf ("You must specify a valid borrower");
+    //   exit();
+    // }
+      ?> -->
 
+<?php include "buttonToLogout.php"; ?>
+      
+
+
+
+
+
+  
     <form method="post" action="problem.php">
       <label for="title">Title</label><br>
       <select id="title" name="title"><br>
         <option value="mr">Mr</option>
-        <option value="ms">Mrs</option>
+        <option value="mrs">Mrs</option>
         <option value="miss">Miss</option>
       </select><br>
       <label for="fname">First name:</label><br>
