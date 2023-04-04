@@ -17,19 +17,22 @@
         margin-right: auto;
         margin-top: 130px;
       ">
-    <h2>Hello</h2>
-    <hr>
-    <h3>Here are your options:</h3>
+
+   
 
     <?php
-    // session_start();
-    
+
     if (isset($_POST['role'])) {
       $_SESSION['role'] = $_POST['role'];
+      printf('<h2>Hello, ' . $_SESSION['role'] . '</h2>');
     }
 
-    // $role =  $_SESSION['role'];
-    
+    ?>
+     <hr>
+    <h3>Here are your options:</h3>
+
+ <?php
+
     if (isset($_SESSION['role'])) {
       if ($_SESSION['role'] == 'admin') {
         printf("<br><a href=isnt-working.php>My computer isn't working</a>
@@ -37,14 +40,13 @@
       ");
       }
       if ($_SESSION['role'] == 'ceo') {
-        // header("location: need-help.php");
+
         printf("<br><a href=isnt-working.php>My computer isn't working</a>
       <br><a href=need-help.php>Call someone and get help</a>
       ");
       }
       if ($_SESSION['role'] == 'manager') {
-        // header("location: lost-password.php");
-        // echo "manager";
+
         printf("<br><a href=isnt-working.php>My computer isn't working</a>
       <br><a href=lost-password.php>Forgotten password</a>
       ");
