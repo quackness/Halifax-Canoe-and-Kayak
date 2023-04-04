@@ -16,8 +16,8 @@
         margin-top: 140px;
       ">
       <form method="post" action="send-email.php">
-        <label for="customeremail">Your email:</label>
-        <input type="email" name="customeremail" id="c">
+        <label for="newAccount">Your email:</label>
+        <input type="email" name="newAccount" emailType="newAccount">
 
         <label for="message">Your message:</label>
         <textarea name="message" id="message"></textarea>

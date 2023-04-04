@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +12,7 @@
   <title>Need help?</title>
 </head>
 <body>
+
 
 <?php include "header.php"; ?>
 <div style="

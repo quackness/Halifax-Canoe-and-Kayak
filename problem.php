@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,40 +8,53 @@
   <link rel="stylesheet" href="main.css" type="text/css" />
   <title>Problem</title>
 </head>
+
 <body>
-<h2>Hello</h2>
-<hr>
-<h3>Here are your options:</h3>
-<?php
-  session_start();
+  <?php include "header.php"; ?>
+  <div style="
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 130px;
+      ">
+    <h2>Hello</h2>
+    <hr>
+    <h3>Here are your options:</h3>
 
-  if (isset($_POST['role'])) {
-    $_SESSION['role'] = $_POST['role'];
+    <?php
+    // session_start();
     
-  }
+    if (isset($_POST['role'])) {
+      $_SESSION['role'] = $_POST['role'];
+    }
 
-  if (isset($_SESSION['role'])) {
-    if ($_SESSION['role'] == 'admin') {
-      printf ("<br><a href=isnt-working.php>My computer isn't working</a>
+    // $role =  $_SESSION['role'];
+    
+    if (isset($_SESSION['role'])) {
+      if ($_SESSION['role'] == 'admin') {
+        printf("<br><a href=isnt-working.php>My computer isn't working</a>
       <br><a href=new-account.php>Create new account</a>
       ");
-    }
-    if ($_SESSION['role'] == 'ceo') {
-      // header("location: need-help.php");
-      printf ("<br><a href=isnt-working.php>My computer isn't working</a>
+      }
+      if ($_SESSION['role'] == 'ceo') {
+        // header("location: need-help.php");
+        printf("<br><a href=isnt-working.php>My computer isn't working</a>
       <br><a href=need-help.php>Call someone and get help</a>
       ");
-    }
-    if ($_SESSION['role'] == 'manager') {
-      // header("location: lost-password.php");
-      // echo "manager";
-      printf ("<br><a href=isnt-working.php>My computer isn't working</a>
+      }
+      if ($_SESSION['role'] == 'manager') {
+        // header("location: lost-password.php");
+        // echo "manager";
+        printf("<br><a href=isnt-working.php>My computer isn't working</a>
       <br><a href=lost-password.php>Forgotten password</a>
       ");
 
+      }
     }
-  }
-  ?>
- 
+    ?>
+  </div>
+  <?php include "footer.php"; ?>
+
 </body>
+
 </html>
