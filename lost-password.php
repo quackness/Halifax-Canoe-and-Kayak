@@ -17,6 +17,7 @@
         margin-right: auto;
         margin-top: 140px;
       ">
+     <?php include "buttonToLogout.php"; ?>
     <form method="get" action="send-email.php">
       <label for="email">Your email:</label>
       <input type="email" name="email">

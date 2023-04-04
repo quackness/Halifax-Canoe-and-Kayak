@@ -18,7 +18,7 @@
         margin-top: 130px;
       ">
 
-<?php include "buttonToLogout.php"; ?>
+  <?php include "buttonToLogout.php"; ?>
 
 
     <?php
@@ -36,7 +36,7 @@
 
     if (isset($_POST['role'])) {
       $_SESSION['role'] = $_POST['role'];
-      printf('<h2>Hello, ' . $_SESSION['role'] . '!</h2>');
+      printf('<h2>Hello '. $fname . ', you are logged in as '. $_SESSION['role'] . '</h2>');
     }
 
     ?>

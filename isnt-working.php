@@ -20,6 +20,9 @@
         margin-right: auto;
         margin-top: 140px;
       ">
+
+<?php include "buttonToLogout.php"; ?>
+
 <h3>So your computer isn't working? Have you tried turning it off?</h3>
       <iframe src="https://giphy.com/embed/4IwnscWi8r5NRuLGRW" width="500" height="480">
       </iframe>
