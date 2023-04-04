@@ -18,8 +18,7 @@
         margin-top: 130px;
       ">
 
-   
-
+  
     <?php
 
     if (isset($_POST['role'])) {

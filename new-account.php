@@ -15,12 +15,14 @@
         margin-right: auto;
         margin-top: 140px;
       ">
-      <form method="post" action="send-email.php">
-        <label for="newAccount">Your email:</label>
-        <input type="email" name="newAccount" emailType="newAccount">
+      <form method="get" action="send-email.php">
+        <label for="email">Your email:</label>
+        <input type="email" name="email" emailType="newAccount">
 
         <label for="message">Your message:</label>
         <textarea name="message" id="message"></textarea>
+
+        <input type="hidden" name="newAccount" value=newAccount>
 
         <input type="submit" name="submit" value="Send message">
       </form>

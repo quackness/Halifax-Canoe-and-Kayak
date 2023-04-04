@@ -21,8 +21,8 @@
 
     <?php
 
-    if (isset($_POST['newAccount'])) {
-      $_SESSION['newAccount'] = $_POST['newAccount'];
+    if (isset($_GET['newAccount'])) {
+      $_SESSION['newAccount'] = $_GET['newAccount'];
       if (isset($_SESSION) == 'newAccount') {
         printf("<br><h3>New account has been created</h3>");
 
@@ -30,9 +30,9 @@
     }
 
 
-    if (isset($_POST['lostpassword'])) {
-      $_SESSION['lostpassword'] = $_POST['lostpassword'];
-      if (isset($_SESSION) == 'lostpassword') {
+    if (isset($_GET['lostPassword'])) {
+      $_SESSION['lostpassword'] = $_GET['lostPassword'];
+      if (isset($_SESSION) == 'lostPassword') {
         printf("<br><h3>Your password has been reset.</h3>
        ");
 

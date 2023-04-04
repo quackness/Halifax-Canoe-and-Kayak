@@ -17,12 +17,14 @@
         margin-right: auto;
         margin-top: 140px;
       ">
-    <form method="post" action="send-email.php">
-      <label for="lostpassword">Your email:</label>
-      <input type="email" name="lostpassword">
+    <form method="get" action="send-email.php">
+      <label for="email">Your email:</label>
+      <input type="email" name="email">
 
       <label for="message">Your message:</label>
       <textarea name="message" id="message"></textarea>
+
+      <input type="hidden" name="lostPassword" value="lostPassword">
 
       <input type="submit" name="submit" value="Send message">
     </form>
