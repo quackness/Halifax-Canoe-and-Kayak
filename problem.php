@@ -18,6 +18,8 @@
         margin-top: 130px;
       ">
 
+<?php include "buttonToLogout.php"; ?>
+
 
     <?php
 

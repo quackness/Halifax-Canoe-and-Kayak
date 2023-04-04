@@ -18,15 +18,9 @@
         margin-right: auto;
         margin-top: 140px;
       ">
-  <div>
+
     
-<!-- <?php
-    // if (!isset($_POST['fname'])) {
-    //   // $fname = $_POST['fname'];
-    //   printf ("You must specify a valid borrower");
-    //   exit();
-    // }
-      ?> -->
+
 
 <?php include "buttonToLogout.php"; ?>
       
@@ -35,7 +29,7 @@
 
 
 
-  
+<div class="form">
     <form method="post" action="problem.php">
       <label for="title">Title</label><br>
       <select id="title" name="title"><br>
@@ -55,6 +49,7 @@
       </select><br>
       <input type="submit" name="submit" value="Submit">
     </form>
+</div>
 </div>
       <?php include "footer.php"; ?>
 </body>
