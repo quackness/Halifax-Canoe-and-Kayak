@@ -25,22 +25,20 @@
 
     if (isset($_GET['newAccount'])) {
       $_SESSION['newAccount'] = $_GET['newAccount'];
+      $_SESSION['message'] = $_GET['message'];
       if (isset($_SESSION) == 'newAccount') {
-        printf("<div class='btn-logout'>
-        <form method='post' action='logout.php' >
-              <button type='submit' name='logout'>Logout</button>
-        </form>
-        </div>");
-      }
-    }
+        printf("<br><h3>New account request sent:</h3>
+        " . $_SESSION['message']);
+       }
+     }
 
 
     if (isset($_GET['lostPassword'])) {
       $_SESSION['lostpassword'] = $_GET['lostPassword'];
+      $_SESSION['message'] = $_GET['message'];
       if (isset($_SESSION) == 'lostPassword') {
-        printf("<br><h3>Your password has been reset.</h3>
-       ");
-
+        printf("<br><h3>Password reset request sent:</h3>
+       " . $_SESSION['message']);
       }
     }
     ?>
