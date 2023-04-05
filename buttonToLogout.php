@@ -8,7 +8,9 @@
   <title>Isn't working?</title>
 </head>
 
-
-<form method="post" action="logout.php" class="btn-logout">
-      <button type="submit" name="logout">Logout</button>
+<div class="btn-logout" >
+<form method="post" action="logout.php" >
+      <button type="submit" name="logout" class="logout-style">Logout</button>
 </form>
+</div>
+

@@ -19,13 +19,18 @@
         margin-top: 140px;
       ">
 
+ <?php include "buttonToLogout.php"; ?> 
+
     <?php
 
     if (isset($_GET['newAccount'])) {
       $_SESSION['newAccount'] = $_GET['newAccount'];
       if (isset($_SESSION) == 'newAccount') {
-        printf("<br><h3>New account has been created</h3>");
-
+        printf("<div class='btn-logout'>
+        <form method='post' action='logout.php' >
+              <button type='submit' name='logout'>Logout</button>
+        </form>
+        </div>");
       }
     }
 
