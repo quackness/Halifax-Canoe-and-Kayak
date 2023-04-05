@@ -23,8 +23,8 @@
 
 <?php include "buttonToLogout.php"; ?>
 
-<h3>So your computer isn't working? Have you tried turning it off?</h3>
-      <iframe src="https://giphy.com/embed/4IwnscWi8r5NRuLGRW" width="500" height="480">
+<h3>So your computer isn't working? Have you tried turning it on/off?</h3>
+      <iframe src="https://giphy.com/embed/4IwnscWi8r5NRuLGRW" width="450px" height="400px">
       </iframe>
   
   </div>
