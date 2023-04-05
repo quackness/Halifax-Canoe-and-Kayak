@@ -1,7 +1,3 @@
-<!-- <?php
-    session_start();
-?> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,24 +7,19 @@
   <link rel="stylesheet" href="main.css" type="text/css" />
   <title>Isn't working?</title>
 </head>
-
 <body>
   <?php include "header.php"; ?>
   <div style="
         width: 500px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 140px;
+        margin-top: 130px;
       ">
-
 <?php include "buttonToLogout.php"; ?>
-
 <h3>So your computer isn't working? Have you tried turning it on/off?</h3>
       <iframe src="https://giphy.com/embed/4IwnscWi8r5NRuLGRW" width="450px" height="400px">
       </iframe>
-  
   </div>
   <?php include "footer.php"; ?>
 </body>
-
 </html>

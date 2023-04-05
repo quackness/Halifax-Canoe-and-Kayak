@@ -10,7 +10,3 @@ session_start();
     </ul>
   </nav>
 </header>
-
-<div>
- 
-</div>

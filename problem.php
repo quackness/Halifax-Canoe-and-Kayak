@@ -23,6 +23,8 @@
 
     <?php
 
+    
+
     if (isset($_POST['fname']) && isset($_POST['lname'])) {
       $fname = $_POST['fname'];
       $lname = $_POST['lname'];
@@ -33,10 +35,14 @@
       }
     }
 
+    if (isset($_POST['title'])) {
+      $title = $_POST['title'];
+    }
+
 
     if (isset($_POST['role'])) {
       $_SESSION['role'] = $_POST['role'];
-      printf('<h2>Hello '. $fname . ', you are logged in as '. $_SESSION['role'] . '</h2>');
+      printf('<h2>Hello '. $title . '. '. $fname . ', you are logged in as '. $_SESSION['role'] . '</h2>');
     }
 
     ?>
@@ -44,7 +50,6 @@
     <h3>Here are your options:</h3>
 
     <?php
-
     if (isset($_SESSION['role'])) {
       if ($_SESSION['role'] == 'admin') {
         printf("<br><a href=isnt-working.php>My computer isn't working</a>

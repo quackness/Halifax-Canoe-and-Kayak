@@ -29,7 +29,7 @@
       <textarea name="message" id="message" class="form-control"></textarea>
     </div>
       <input type="hidden" name="lostPassword" value="lostPassword">
-      <input type="submit" name="submit" value="Send message">
+      <input type="submit" name="submit" value="Reset password" class="btn btn-primary" style="background-color:#818abf">
     </form>
   </div>
 

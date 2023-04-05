@@ -31,7 +31,7 @@
       <textarea name="message" id="message" class="form-control"></textarea>
     </div>
       <input type="hidden" name="newAccount" value=newAccount>
-      <input type="submit" name="submit" value="Send message" class="btn btn-primary" style="background-color:#818abf">
+      <input type="submit" name="submit" value="Create new account" class="btn btn-primary" style="background-color:#818abf">
     </form>
   </div>
   </div>
