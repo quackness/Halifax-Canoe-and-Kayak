@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="main.css" type="text/css" />
   <title>Logout</title>
 </head>
-<body>
+<body style="background-color: #dbdcdd">
   <?php include "header.php"; ?>
   <div style="
         width: 500px;
