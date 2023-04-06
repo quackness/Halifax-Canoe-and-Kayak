@@ -7,10 +7,8 @@
   <link rel="stylesheet" href="main.css" type="text/css" />
   <title>Isn't working?</title>
 </head>
-
-<div class="btn-logout" >
-<form method="post" action="logout.php" >
-      <button type="submit" name="logout" class="logout-style">Logout</button>
-</form>
+<div class="btn-logout">
+  <a href="logout.php">
+    <button>Logout</button>
+  </a>
 </div>
-

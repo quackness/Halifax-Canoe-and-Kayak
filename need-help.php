@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +22,3 @@
       <h3>Call the number:<a href=“tel:555-666-7777”>📲 555-666-7777</a></h3>
 </div>
 <?php include "footer.php"; ?>
-
-</body>
-</html>

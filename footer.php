@@ -1,1 +1,3 @@
-<footer class="ftr"></footer>
+    <footer class="ftr"></footer>
+  </body>
+</html>

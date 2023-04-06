@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,12 +18,7 @@
       ">
 
   <?php include "buttonToLogout.php"; ?>
-
-
     <?php
-
-    
-
     if (isset($_POST['fname']) && isset($_POST['lname'])) {
       $fname = $_POST['fname'];
       $lname = $_POST['lname'];
@@ -43,6 +37,8 @@
     if (isset($_POST['role'])) {
       $_SESSION['role'] = $_POST['role'];
       printf('<h2>Hello '. $title . '. '. $fname . ', you are logged in as '. $_SESSION['role'] . '</h2>');
+    } else {
+      printf('<h2>You have clicked back</h2>');
     }
 
     ?>
@@ -56,7 +52,7 @@
       <br><a href=new-account.php>Create new account</a>
       ");
       }
-      if ($_SESSION['role'] == 'ceo') {
+      if ($_SESSION['role'] == 'CEO') {
 
         printf("<br><a href=isnt-working.php>My computer isn't working</a>
       <br><a href=need-help.php>Call someone and get help</a>
@@ -73,7 +69,3 @@
     ?>
   </div>
   <?php include "footer.php"; ?>
-
-</body>
-
-</html>

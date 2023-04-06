@@ -156,8 +156,16 @@ hr {
 } */
 
 
-.btn-logout {
-  margin-left: 800px;
+
+.btn-logout button{
+  background-color: #5a524b; 
+  color: white;
+  border-radius: 30px;
+  width: 100px;
+  height: 60px;
+  font-weight: bolder;
+  margin-top: 60px;
+  margin-left: 600px;
 }
 
 .logout-style {
