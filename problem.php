@@ -1,3 +1,8 @@
+<?php 
+header("Expires: Sat, 01 Jan 2025 00:00:00 GMT"); 
+header("Last-Modified: ".gmdate("D, d M Y H:i:s")." GMT"); 
+header("Cache-Control: post-check=0, pre-check=0",false); 
+session_cache_limiter("must-revalidate"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,15 +14,15 @@
 </head>
 
 <body>
-  <?php include "header.php"; ?>
+  <?php include "header.php"; ini_set('display_errors', 1); ?>
   <div style="
         width: 1200px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 130px;
       ">
+      <?php include "buttonToLogout.php"; ?>
 
-  <?php include "buttonToLogout.php"; ?>
     <?php
     if (isset($_POST['fname']) && isset($_POST['lname'])) {
       $fname = $_POST['fname'];
