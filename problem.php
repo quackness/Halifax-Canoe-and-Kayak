@@ -42,10 +42,7 @@ session_cache_limiter("must-revalidate"); ?>
     if (isset($_POST['role'])) {
       $_SESSION['role'] = $_POST['role'];
       printf('<h2>Hello '. $title . '. '. $fname . ', you are logged in as '. $_SESSION['role'] . '</h2>');
-    } else {
-      printf('<h2>You have clicked back</h2>');
-    }
-
+    } 
     ?>
     <hr>
     <h3>Here are your options:</h3>
