@@ -14,10 +14,15 @@
   $duration = $_POST['duration'];
   $summary = $_POST['summary'];
 
+  if (!is_int($duration)) {
+    echo "<h3>Trip duration must be a number.</h3>";
+    echo ("<br><a href=admin-add.php>Return to form.</a>");
+    exit();
+  }
+
   // echo "$heading  $tripdate  $duration  $summary ";
   
-  $sql = "INSERT INTO adventures(summary, tripdate, duration, summary)
-  -- (summary, tripdate, duration, summary)
+  $sql = "INSERT INTO adventures(heading, tripdate, duration, summary)
   VALUES ('$heading', '$tripdate', '$duration', '$summary ')";
 
   if (mysqli_query($conn, $sql)) {
