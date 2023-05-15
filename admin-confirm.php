@@ -6,8 +6,28 @@
         margin-right: auto;
         margin-top: 250px;
       ">
-
   </div>
+
+  <?php
+  $heading = $_POST['heading'];
+  $tripdate = $_POST['tripdate'];
+  $duration = $_POST['duration'];
+  $summary = $_POST['summary'];
+
+  // echo "$heading  $tripdate  $duration  $summary ";
+  
+  $sql = "INSERT INTO adventures(summary, tripdate, duration, summary)
+  -- (summary, tripdate, duration, summary)
+  VALUES ('$heading', '$tripdate', '$duration', '$summary ')";
+
+  if (mysqli_query($conn, $sql)) {
+    echo "<h3>Date has been added successfully to a database.</h3>";
+  } else {
+    echo "error " . $sql . " " . mysqli_error($conn);
+
+  }
+
+  ?>
   <div>
     <h1>Admin - Confirm</h1>
     <hr>

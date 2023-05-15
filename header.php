@@ -1,8 +1,14 @@
 <?php
 session_start();
+$conn = mysqli_connect("localhost", "root", "root", "kayaks");
+if ($conn === false) {
+  die("Error: could not connect" . mysqli_connect_error());
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,19 +29,18 @@ session_start();
   </nav>
 </header>
 <div id="sidebar" style="width: 500px; background-color: #818abf">
-        <aside>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Book trip</a></li>
-            <li><a href="index.php">Admin Login</a></li>
-          </ul>
-        </aside>
+  <aside>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Book trip</a></li>
+      <li><a href="index.php">Admin Login</a></li>
+    </ul>
+  </aside>
 </div>
 <script>
-    $(document).ready(function () {
-      $("#hamburger").click(function () {
-        $("#sidebar").toggle();
-      });
+  $(document).ready(function () {
+    $("#hamburger").click(function () {
+      $("#sidebar").toggle();
     });
-  </script>
-
+  });
+</script>
