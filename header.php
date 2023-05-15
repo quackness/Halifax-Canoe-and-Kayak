@@ -5,6 +5,15 @@ if ($conn === false) {
   die("Error: could not connect" . mysqli_connect_error());
 }
 
+$entries = "SELECT * FROM kayaks";
+$result = mysqli_query($conn, $entries);
+if (mysqli_num_rows($result) > 0) {
+  while ($row = mysqli_fetch_assoc($result)) {
+    echo "Time: " . $row["duration"];
+  }
+
+}
+;
 ?>
 <!DOCTYPE html>
 <html lang="en">
