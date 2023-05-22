@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php include "header.php"; ?>
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,47 +12,74 @@
 </head>
 
 <body>
-  <?php include "header.php"; ?>
-      <div style="
-        width: 500px;
+  <header id="header_top">
+    <nav>
+      <ul>
+        <li><img id="hamburger" src="images/hamburger.png" /></li>
+        <li id="header_text">Halifax Canoe and Kayak</li>
+        <li><img src="images/paddle-white.png" alt="Paddle logo" /></li>
+      </ul>
+    </nav>
+  </header>
+  <div style="
+        width: 1200px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 100px;
+        margin-top: 120px;
+        margin-bottom: 100px;
       ">
-    <?php include "buttonToLogout.php"; ?>
-    <form method="post" action="problem.php">
-      <div class="mb-3">
-        <label for="title">Title</label><br>
-        <select id="title" name="title" class="form-control"><br>
-          <option value="Mr">Mr</option>
-          <option value="Mrs">Mrs</option>
-          <option value="Miss">Miss</option>
-        </select><br>
-      </div>
-      <div class="mb-3">
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" class="form-control"><br>
-      </div>
-      <div class="mb-3">
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" class="form-control"><br>
-      </div>
-      <div class="mb-3">
-        <label for="role">Role</label><br>
-        <select id="role" name="role" class="form-control"><br>
-          <option value="admin">Admin</option>
-          <option value="manager">Manager</option>
-          <option value="CEO">CEO</option>
-        </select><br>
-      </div>
-      <input type="hidden" name="formSubmitted" value="formSubmitted">
-      <input type="submit" name="submit" value="Submit" class="btn btn-primary" style="background-color:#818abf">
-    </form>
-  </div>
 
-  </div>
 
-  <?php include "footer.php"; ?>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    <div id="sidebar" style="width: 700px; background-color: #818abf">
+      <aside>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Book trip</a></li>
+          <li><a href="index.php">Admin Login</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <main>
+      <article>
+        <header>
+          <img src="images/canoe.jpg" alt="canoe on the lake" />
+          <div class="center">Come experience Canada</div>
+          <h1>Upcoming adventures</h1>
+        </header>
+
+        <hr />
+        <?php
+        $entries = "SELECT * FROM adventures";
+        $result = mysqli_query($conn, $entries);
+        if (mysqli_num_rows($result) > 0) {
+          while ($row = mysqli_fetch_assoc($result)) {
+            echo "<h3>" . $row['heading'] . "</h3>";
+            echo "<div class='date'><p>Date: " . $row['tripdate'] . "</p></div>";
+            echo "<div class='date'><p>Duration: " . $row['duration'] . " days</p></div>";
+            echo "<h3>Sumary: </h3><p>" . $row['summary'] . "</p>";
+            echo "<hr>";
+          }
+        }
+        ;
+        ?>
+      </article>
+    </main>
+  </div>
+  <footer class="ftr"></footer>
+  <!-- //toggle jquery -->
+  <script>
+    $(document).ready(function () {
+      $("#hamburger").click(function () {
+        $("#sidebar").toggle();
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+    integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
     crossorigin="anonymous"></script>
+</body>
+
+<?php include "footer.php"; ?>
+
+</html>

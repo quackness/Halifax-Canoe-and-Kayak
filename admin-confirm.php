@@ -14,33 +14,26 @@
   $duration = $_POST['duration'];
   $summary = $_POST['summary'];
 
-  // if ($heading && )
-  
-  // if (is_int($duration) == false) {
-  //   echo "<h3>Trip duration must be a number.</h3>";
-  //   echo ("<br><a href=admin-add.php>Return to form.</a>");
-  //   exit();
-  // }
-  
-  // echo "$heading  $tripdate  $duration  $summary ";
-  
+  if (!$heading || !$tripdate || !$duration || !$summary) {
+    printf("Some fields are empty");
+    printf("<br><a href=./admin-add.php>Return to the form page </a>");
+    exit();
+  }
+
   $sql = "INSERT INTO adventures(heading, tripdate, duration, summary)
   VALUES ('$heading', '$tripdate', '$duration', '$summary ')";
 
+
   if (mysqli_query($conn, $sql)) {
-    echo "<h3>Adventure has been added successfully to a database.</h3>";
+    echo "<h3>Adventure has been added successfully to database.</h3>";
   } else {
     echo "error " . $sql . " " . mysqli_error($conn);
-
   }
+
 
   ?>
   <div>
-    <h1>Admin - Confirm</h1>
-    <hr>
-    </hr>
-    <h3>Date has been added successfully to a database.</h3>
-    <h2><a href="/assignments/kayak_club/all-adventures.php">View All Adventures</h2>
+    <h2><a href="/index.php">View All Adventures</h2>
   </div>
 
   <?php include "footer.php"; ?>

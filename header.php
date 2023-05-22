@@ -1,19 +1,10 @@
 <?php
-session_start();
-$conn = mysqli_connect("localhost", "root", "root", "kayaks");
+
+$conn = mysqli_connect("localhost", "id20560535_karo", "o10T8#Qj!", "id20560535_kayaks");
 if ($conn === false) {
   die("Error: could not connect" . mysqli_connect_error());
 }
 
-$entries = "SELECT * FROM kayaks";
-$result = mysqli_query($conn, $entries);
-if (mysqli_num_rows($result) > 0) {
-  while ($row = mysqli_fetch_assoc($result)) {
-    echo "Time: " . $row["duration"];
-  }
-
-}
-;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,6 +19,7 @@ if (mysqli_num_rows($result) > 0) {
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <title>Admin Index Page</title>
 </head>
+
 <header id="header_top">
   <nav>
     <ul>
@@ -46,10 +38,3 @@ if (mysqli_num_rows($result) > 0) {
     </ul>
   </aside>
 </div>
-<script>
-  $(document).ready(function () {
-    $("#hamburger").click(function () {
-      $("#sidebar").toggle();
-    });
-  });
-</script>

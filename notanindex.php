@@ -18,30 +18,39 @@
         width: 500px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 250px;
+        margin-top: 100px;
       ">
-
-    <form method="post" action="admin-confirm.php ">
+    <?php include "buttonToLogout.php"; ?>
+    <form method="post" action="problem.php">
       <div class="mb-3">
-        <label for="heading">Heading:</label><br>
-        <input type="text" id="heading" name="heading" class="form-control"><br>
+        <label for="title">Title</label><br>
+        <select id="title" name="title" class="form-control"><br>
+          <option value="Mr">Mr</option>
+          <option value="Mrs">Mrs</option>
+          <option value="Miss">Miss</option>
+        </select><br>
       </div>
       <div class="mb-3">
-        <label for="tripdate">Trip date:</label><br>
-        <input type="date" value="YYYY-MM-DD" name="tripdate" />
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" class="form-control"><br>
       </div>
       <div class="mb-3">
-        <label for="duration">Duration:</label><br>
-        <input type="text" id="duration" name="duration" class="form-control"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" class="form-control"><br>
       </div>
       <div class="mb-3">
-        <label for="summary">Summary:</label><br>
-        <input type="text" id="summary" name="summary" class="form-control"><br>
+        <label for="role">Role</label><br>
+        <select id="role" name="role" class="form-control"><br>
+          <option value="admin">Admin</option>
+          <option value="manager">Manager</option>
+          <option value="CEO">CEO</option>
+        </select><br>
       </div>
       <input type="hidden" name="formSubmitted" value="formSubmitted">
       <input type="submit" name="submit" value="Submit" class="btn btn-primary" style="background-color:#818abf">
     </form>
   </div>
+
   </div>
 
   <?php include "footer.php"; ?>

@@ -131,34 +131,17 @@ hr {
   background-color: #818abf;
 }
 
-
-
-/* .gify {
+.gify {
   height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 350px;
-  margin-bottom: 300px
+  margin-bottom: 300px;
 }
 
-
-
-.logout-p {
-  margin-top:150px;
-}
-
-/* .gap {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 150px;
-} */
-
-
-
-.btn-logout button{
-  background-color: #5a524b; 
+.btn-logout button {
+  background-color: #5a524b;
   color: white;
   border-radius: 30px;
   width: 100px;
@@ -169,11 +152,11 @@ hr {
 }
 
 .logout-style {
-  background-color: #5a524b; 
-  color: white; 
-  width: 100px; 
-  height: 50px; 
-  border-radius: 30px
+  background-color: #5a524b;
+  color: white;
+  width: 100px;
+  height: 50px;
+  border-radius: 30px;
 }
 
 @media only screen and (max-width: 800px) {
