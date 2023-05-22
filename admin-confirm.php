@@ -33,7 +33,7 @@
 
   ?>
   <div>
-    <h2><a href="/index.php">View All Adventures</h2>
+    <h2><a href="index.php">View All Adventures</h2>
   </div>
 
   <?php include "footer.php"; ?>
