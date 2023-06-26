@@ -4,12 +4,34 @@
         width: 500px;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 100px;
       ">
   <?php
-  $heading = $_POST['heading'];
-  $tripdate = $_POST['tripdate'];
-  $duration = $_POST['duration'];
-  $summary = $_POST['summary'];
+
+  if (isset($_POST['heading'])) {
+    $heading = $_POST['heading'];
+  } else {
+    $heading = "";
+  }
+
+  if (isset($_POST['tripdate'])) {
+    $tripdate = $_POST['tripdate'];
+  } else {
+    $tripdate = "";
+  }
+
+  if (isset($_POST['duration'])) {
+    $duration = $_POST['duration'];
+  } else {
+    $duration = "";
+  }
+
+  if (isset($_POST['summary'])) {
+    $summary = $_POST['summary'];
+  } else {
+    $summary = "";
+  }
+
 
   if (!$heading || !$tripdate || !$duration || !$summary) {
     printf("Some fields are empty");
