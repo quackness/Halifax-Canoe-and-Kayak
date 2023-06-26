@@ -3,7 +3,7 @@
         width: 500px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 250px;
+        margin-top: 120px;
       ">
 
   <form method="post" action="admin-confirm.php ">
