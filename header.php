@@ -1,11 +1,3 @@
-<?php
-
-$conn = mysqli_connect("localhost", "id20560535_karo", "o10T8#Qj!", "id20560535_kayaks");
-if ($conn === false) {
-  die("Error: could not connect" . mysqli_connect_error());
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,22 +11,36 @@ if ($conn === false) {
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <title>Admin Index Page</title>
 </head>
+<?php
+$conn = mysqli_connect("localhost", "id20560535_karo", "o10T8#Qj!", "id20560535_kayaks");
+if ($conn === false) {
+  die("Error: could not connect" . mysqli_connect_error());
+}
+?>
 
-<header id="header_top">
-  <nav>
-    <ul>
-      <li><img id="hamburger" src="images/hamburger.png" /></li>
-      <li id="header_text">Halifax Canoe and Kayak</li>
-      <li><img src="images/paddle-white.png" alt="Paddle logo" /></li>
-    </ul>
-  </nav>
-</header>
-<div id="sidebar" style="width: 500px; background-color: #818abf">
-  <aside>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#">Book trip</a></li>
-      <li><a href="index.php">Admin Login</a></li>
-    </ul>
-  </aside>
-</div>
+<body>
+  <header id="header_top">
+    <nav>
+      <ul>
+        <li><img id="hamburger" src="images/hamburger.png" /></li>
+        <li id="header_text">Halifax Canoe and Kayak</li>
+        <li><img src="images/paddle-white.png" alt="Paddle logo" /></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="sidebar" style="width: 500px; background-color: #818abf">
+    <aside>
+      <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="admin-add.php">Book trip</a></li>
+        <li><a href="form.php">Admin Login</a></li>
+      </ul>
+    </aside>
+  </div>
+  <div style="
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 120px;
+        margin-bottom: 100px;
+      ">
