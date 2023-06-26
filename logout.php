@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="main.css" type="text/css" />
   <title>Logout</title>
 </head>
+
 <body style="background-color: #dbdcdd">
   <?php include "header.php"; ?>
   <div style="
@@ -18,6 +20,7 @@
 
 
     <?php
+    session_start();
     // $_SESSION['username'] = 'Karolina';
     // echo "\n";
     $_SESSION = [];
@@ -30,6 +33,6 @@
       printf("<br><h3>Logging out not successful.</h3>
       <br><h3><a href=index.php>Return to the home page and create a support ticket🔙 </a></h3>");
     }
-      ?>
+    ?>
   </div>
   <?php include "footer.php"; ?>
